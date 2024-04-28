@@ -1,0 +1,34 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+
+  datasource:
+    username: root
+    password: johnty
+    url: jdbc:mysql://localhost:3306/infy_go_payment
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+server:
+  servlet.context-path: /payment-service
+  port: 8200
+
+
+logging:
+  file: Errorlog.log
+  level:
+    root: info
+    com.infoys.ars: info
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss,SSS} %5p [%t] %c [%M] - %m%n"
+
+
+
+
